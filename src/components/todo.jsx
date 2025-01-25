@@ -1,6 +1,6 @@
-import react from react
+import React from "react"
 
-const todo = ({todo}) => {
+const Todo = ({todo}) => {
     return(
         <div className="todo">
             <div className="content">
@@ -16,4 +16,4 @@ const todo = ({todo}) => {
     )
 }
 
-export default todo
+export default Todo
