@@ -5,15 +5,16 @@
 }
 
 body {
-  background-color: white;
-  color: #333;
+  background-color: rgba(0, 0, 0, 0.952);
+  color: #f5f5f5;
   padding: 30px;
 }
 
 .app {
+  border: 1px solid rgba(255, 255, 255, 0.425);
   max-width: 600px;
   margin: 0 auto 300px;
-  background-color: #efefef;
+  background-color: rgba(0, 0, 0, 0.952);
   padding: 20px 30px;
   border-radius: 30px;
 }
@@ -35,7 +36,7 @@ input {
 }
 
 button {
-  background-color: #333974;
+  background-color: #0a20e9;
   color: white;
   padding: 5px 10px;
   margin-right: 10px;
@@ -50,14 +51,15 @@ button:hover {
 }
 
 .todo-list {
+  color: #0a20e9;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #555;
+
 }
 
 .todo {
   background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -67,28 +69,42 @@ button:hover {
 }
 
 .complete {
-  background-color: #5cb85c;
+  background-color: #109b10;
 }
 
 .remove {
-  background-color: #d9534f;
+  background-color: #920904;
 }
 
 .todo-form {
   padding-bottom: 1.5rem;
 }
 
+.todo-form
 input,
 select {
+  border-radius: 3px;
   padding: 5px;
+  
+  width: 17em;
   margin-bottom: 10px;
-  border: 1px solid #ddd;
-  width: 100%;
+  border: 1px solid #f5f5f5;
+
+}
+
+.todo-form .categoria{
+  margin-left: 1em;
+}
+
+.todo-form button{
+  
+  height:2em;
+  margin-left: 1em;
 }
 
 .filter,
 .search {
-  border-bottom: 1px solid #555;
+
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
@@ -96,9 +112,29 @@ select {
 .filter-options{
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+}
+
+.filter-options select{
+  width: 15em;
+}
+
+.filter-options p{
+  text-align: left;
 }
 
 .filter-options div{
-  flex: 1 1 0;
+  text-align: right;
+  padding-right: 1em;
+}
+
+.tarefa{
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+.category{
+  
+  font-weight: 400;
+  font-size: 1em;
+  color: #240505;
 }
