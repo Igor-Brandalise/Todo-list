@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React from "react";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 import Todo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
@@ -8,31 +9,10 @@ import Filter from "./components/Filter";
 import "./App.css";
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: "criar funcionalidade x no sistema",
-      category: "Trabalho",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      text: "Ir pra academia",
-      category: "Pessoal",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      text: "Estudar React",
-      category: "Estudos",
-      isCompleted: false,
-    },
-  ]);
-
-  const [search, setSearch] = useState("");
-
-  const [filter, setFilter] = useState("All");
-  const [sort, setSort] = useState("Asc");
+  const [todos, setTodos] = useLocalStorage("todos", []); // Usando o hook customizado
+  const [search, setSearch] = React.useState("");
+  const [filter, setFilter] = React.useState("All");
+  const [sort, setSort] = React.useState("Asc");
 
   const addTodo = (text, category) => {
     const newTodos = [
@@ -44,29 +24,24 @@ function App() {
         isCompleted: false,
       },
     ];
-
     setTodos(newTodos);
   };
 
   const removeTodo = (id) => {
-    const newTodos = [...todos];
-    const filteredTodos = newTodos.filter((todo) =>
-      todo.id !== id ? todo : null
-    );
-    setTodos(filteredTodos);
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
   };
 
   const completeTodo = (id) => {
-    const newTodos = [...todos];
-    newTodos.map((todo) =>
-      todo.id === id ? (todo.isCompleted = !todo.isCompleted) : todo
+    const newTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo
     );
     setTodos(newTodos);
   };
 
   return (
     <div className="app">
-      <h1>Lista de tarefas</h1>
+      <h1>Lista de Tarefas</h1>
 
       <Search search={search} setSearch={setSearch} />
       <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
@@ -84,7 +59,7 @@ function App() {
             todo.text.toLowerCase().includes(search.toLowerCase())
           )
           .sort((a, b) =>
-            sort == "Asc"
+            sort === "Asc"
               ? a.text.localeCompare(b.text)
               : b.text.localeCompare(a.text)
           )
