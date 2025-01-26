@@ -42,6 +42,7 @@ function App() {
   return (
     <div className="app">
       <h1>Lista de Tarefas</h1>
+      
       <TodoForm addTodo={addTodo} />
       <Search search={search} setSearch={setSearch} />
       <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
