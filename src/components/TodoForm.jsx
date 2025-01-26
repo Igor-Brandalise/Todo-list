@@ -20,11 +20,11 @@ const TodoForm = ({ addTodo }) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Digite o Titulo"
+          placeholder="Digite o Título"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+        <select value={category} onChange={(e) => setCategory(e.target.value)} className="categoria">
           <option value="">Selecione uma categoria</option>
           <option value="Trabalho">Trabalho</option>
           <option value="Pessoal">Pessoal</option>
