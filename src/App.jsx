@@ -3,6 +3,7 @@ import { useState } from "react";
 import Todo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
 import Search from "./components/search";
+import Filter from "./components/Filter";
 
 import "./App.css";
 
@@ -64,7 +65,8 @@ function App() {
     <div className="app">
       <h1>Lista de tarefas</h1>
 
-      <Search search={search} setSearch={setSearch} />
+      <Search search={search} setSearch={setSearch}/>
+      <Filter/>
 
       <div className="todo-list">
         {todos
