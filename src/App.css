@@ -27,3 +27,28 @@ p{
 input{
   box-sizing: border-box;
 }
+
+button{
+  background-color: #333974;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3;
+}
+button:hover{
+  opacity: .9;
+}
+
+.todo-form{
+  padding-bottom: 1.5rem;
+}
+
+input, select{
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
