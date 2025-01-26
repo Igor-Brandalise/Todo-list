@@ -1,10 +1,16 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  font-family: "Roboto", serif;
+}
+
+body {
   background-color: white;
   color: #333;
   padding: 30px;
 }
 
-.app{
+.app {
   max-width: 600px;
   margin: 0 auto 300px;
   background-color: #efefef;
@@ -12,23 +18,23 @@ body{
   border-radius: 30px;
 }
 
-h1{
+h1 {
   text-align: center;
 }
 
-h2{
+h2 {
   margin-bottom: 10px;
 }
 
-p{
+p {
   margin: 10px 0;
 }
 
-input{
+input {
   box-sizing: border-box;
 }
 
-button{
+button {
   background-color: #333974;
   color: white;
   padding: 5px 10px;
@@ -39,17 +45,17 @@ button{
   opacity: 1;
   transition: 0.3;
 }
-button:hover{
-  opacity: .9;
+button:hover {
+  opacity: 0.9;
 }
 
-.todo-list{
+.todo-list {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #555;
 }
 
-.todo{
+.todo {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -60,21 +66,39 @@ button:hover{
   align-items: center;
 }
 
-.complete{
+.complete {
   background-color: #5cb85c;
 }
 
-.remove{
-  background-color:#d9534f ;
+.remove {
+  background-color: #d9534f;
 }
 
-.todo-form{
+.todo-form {
   padding-bottom: 1.5rem;
 }
 
-input, select{
+input,
+select {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   width: 100%;
+}
+
+.filter,
+.search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.filter-options{
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div{
+  flex: 1 1 0;
 }
