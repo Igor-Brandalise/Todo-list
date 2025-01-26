@@ -9,8 +9,8 @@ const Todo = ({todo}) => {
             </div>
 
             <div>
-              <button>Completar</button>
-              <button>Deletar</button>
+              <button className="complete">Completar</button>
+              <button className="remove">X</button>
             </div>
         </div>
     )
