@@ -48,7 +48,7 @@ function App() {
           <Todo key={todo.id} todo={todo} />
         ))}
       </div>
-      <TodoForm />
+      <TodoForm addTodo={addTodo}/>
     </div>
   );
 }
