@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
-import Todo from "./components/Todotemp";
+import Todo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
-import Search from "./components/search";
+import Search from "./components/Search";
 import Filter from "./components/Filter";
 
 import "./App.css";
